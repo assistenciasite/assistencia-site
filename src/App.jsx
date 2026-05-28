@@ -69,26 +69,37 @@ const MODULOS = [
     tags: ["Abastecimentos", "Veículos", "Dotações", "Relatórios"],
   },
   {
-    id: "manutencao",
-    icon: "🔧",
-    titulo: "Frota de Manutenção",
+    id: "gas",
+    icon: "🟤",
+    titulo: "Frota de Gás",
     descricao:
-      "Controle de revisões, trocas de peças, ordens de serviço e histórico de manutenção preventiva.",
+      "Controle de recargas de gás, consumo por veículo, fornecedores e dotações orçamentárias.",
     status: "breve",
     cor: "#fb8c00",
     grad: "linear-gradient(135deg, #e65100, #fb8c00)",
-    tags: ["Revisões", "Peças", "OS", "Preventiva"],
+    tags: ["Recargas", "Consumo", "Fornecedores", "Dotações"],
   },
   {
-    id: "viagens",
-    icon: "🗺️",
-    titulo: "Frota de Viagens",
+    id: "lavajato",
+    icon: "🚿",
+    titulo: "Frota de Lava Jato",
     descricao:
-      "Registro de rotas, controle de diárias, autorizações de deslocamento e relatório de destinos.",
+      "Registro de lavagens, tipos de serviço, histórico por veículo e controle de gastos com higienização.",
+    status: "breve",
+    cor: "#00897b",
+    grad: "linear-gradient(135deg, #004d40, #00897b)",
+    tags: ["Lavagens", "Higienização", "Histórico", "Gastos"],
+  },
+  {
+    id: "lanche",
+    icon: "🍱",
+    titulo: "Frota de Lanche",
+    descricao:
+      "Controle de despesas com alimentação dos motoristas, diárias de lanche e relatórios por período.",
     status: "breve",
     cor: "#8e24aa",
     grad: "linear-gradient(135deg, #4a148c, #8e24aa)",
-    tags: ["Rotas", "Diárias", "Autorizações", "Destinos"],
+    tags: ["Alimentação", "Motoristas", "Diárias", "Relatórios"],
   },
 ];
 
@@ -184,11 +195,14 @@ function TelaLogin({ onLogin }) {
     <div
       style={{
         minHeight: "100vh",
+        width: "100vw",
         background: "#0a1520",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         fontFamily: "'Sora', sans-serif",
+        margin: 0,
+        padding: 0,
       }}
     >
       <link
@@ -362,8 +376,12 @@ function TelaModulos({ usuario, onSelecionar, onLogout }) {
     <div
       style={{
         minHeight: "100vh",
+        width: "100vw",
         background: "#0a1520",
         fontFamily: "'Sora', sans-serif",
+        margin: 0,
+        padding: 0,
+        boxSizing: "border-box",
       }}
     >
       <link
@@ -745,7 +763,11 @@ function ModuloCombustivel({ usuario, onVoltar }) {
         fontFamily: "'Sora', sans-serif",
         background: "#0f1923",
         minHeight: "100vh",
+        width: "100vw",
         color: "#e8edf3",
+        margin: 0,
+        padding: 0,
+        boxSizing: "border-box",
       }}
     >
       <link
